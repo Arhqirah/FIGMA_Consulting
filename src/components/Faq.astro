@@ -1,0 +1,62 @@
+---
+const { title, body, data, id } = Astro.props;
+---
+
+<div class="faq-item">
+  <input type="checkbox" class="faq-toggle" id={id} />
+  <label class="faq-question" for={data}>{title}</label>
+  <div class="faq-answer">
+    <p>{body}</p>
+  </div>
+</div>
+
+<style>
+  p {
+    max-width: 60ch;
+  }
+
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  .faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+  }
+  .faq-answer {
+    display: none;
+    margin-top: 10px;
+  }
+  .faq-answer p {
+    margin: 0;
+  }
+  .faq-toggle {
+    display: none;
+  }
+  .faq-toggle + label {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  .faq-toggle + label:after {
+    content: url("../icons/plus.svg");
+    padding-left: 110px;
+  }
+  .faq-toggle:checked + label:after {
+    content: url("../icons/minus.svg");
+  }
+  .faq-toggle:checked ~ .faq-answer {
+    display: block;
+  }
+
+  .faq-item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+</style>

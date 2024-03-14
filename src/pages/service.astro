@@ -1,46 +1,45 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ScrollingContainer from "../components/ScrollingContainer.astro";
 import Heading from "../components/Heading.astro";
-import OurVisionSection from "../components/OurVisionSection.astro";
-import NumbersSection from "../components/NumbersSection.astro";
-import ValuesSection from "../components/ValuesSection.astro";
-import ValueScroll from "../components/ValueScroll.astro";
-import UserExperience from "../components/UserExperience.astro";
-import ChampionSection from "../components/ChampionSection.astro";
-import ChampionTeam from "../components/ChampionTeam.astro";
-import BetterConsultSection from "../components/BetterConsultSection.astro";
+import HeaderSection from "../components/HeaderSection.astro";
+import WhatToSectionSection from "../components/WhatToSection.astro";
+import StrategySection from "../components/StrategySection.astro";
+import ContactSection from "../components/ContactSection.astro";
+import FaqSection from "../components/FaqSection.astro";
 ---
 
-<MainLayout title="About">
-  <figure class="full"><img src="../images/aboutheading.jpg" alt="" /></figure>
+<MainLayout title="Service">
+  <figure class="full"><img src="../images/aboutone.jpg" alt="" /></figure>
   <div class="head-container">
-    <Heading title="services" />
-    <p>Creative Services For Boost Your Business Growth</p>
+    <Heading title="service single" />
+    <p>Service Details</p>
   </div>
-  <OurVisionSection />
-  <NumbersSection />
-  <ValuesSection />
+  <div class="container">
+    <HeaderSection />
+  </div>
   <div class="scroll">
-    <ValueScroll />
+    <ScrollingContainer />
   </div>
-  <UserExperience />
-  <ChampionSection />
-  <div class="scroll">
-    <ChampionTeam />
-  </div>
-  <BetterConsultSection />
+  <WhatToSectionSection />
+  <StrategySection />
+  <ContactSection />
+  <FaqSection />
 </MainLayout>
 
 <style>
   .container {
     grid-column: feature;
   }
-  .full {
-    grid-column: full;
-  }
+
   .scroll {
     grid-column: feature/-1;
   }
+
+  .full {
+    grid-column: full;
+  }
+
   .head-container {
     grid-column: feature;
     margin-top: max(-35%, 50% - 80%);
@@ -55,7 +54,6 @@ import BetterConsultSection from "../components/BetterConsultSection.astro";
     border-radius: 1.8125rem;
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(5.5px);
-    max-width: 75ch;
     p {
       color: var(--primary03);
       font-size: var(--heading01);
@@ -63,7 +61,6 @@ import BetterConsultSection from "../components/BetterConsultSection.astro";
       font-style: normal;
       font-weight: var(--thick);
       line-height: var(--heading-large-line-heigh);
-      max-width: 40ch;
     }
   }
 

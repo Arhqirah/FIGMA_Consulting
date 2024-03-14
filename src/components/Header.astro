@@ -1,0 +1,51 @@
+<header>
+    <ul>
+      <li><a href="/#">About</a></li>
+      <li><a href="/casestudy">Case Study</a></li>
+      <li><a href="/service">Service</a></li>
+      <li><a href="/team">Team</a></li>
+    </ul>
+  </header>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname;
+  const links = document.querySelectorAll('header ul li a');
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+    }
+  });
+});
+
+  </script>
+  <style>
+    header {
+      background: var(--primary03);
+      height: 6svh;
+  
+      ul {
+        list-style: none;
+        margin-top: 0;
+        display: flex;
+        gap: 1em;
+        justify-content: space-evenly;
+
+      }
+  
+      li {
+        padding: 1rem;
+      }
+  
+      a {
+        color: var(--secondary02);
+        text-decoration: none;
+      }
+    }
+    .active {
+  text-decoration: underline;
+  color: var(--primary01);
+}
+  </style>
+  
+  

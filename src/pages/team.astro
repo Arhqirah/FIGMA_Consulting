@@ -1,34 +1,24 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Heading from "../components/Heading.astro";
-import OurVisionSection from "../components/OurVisionSection.astro";
-import NumbersSection from "../components/NumbersSection.astro";
-import ValuesSection from "../components/ValuesSection.astro";
-import ValueScroll from "../components/ValueScroll.astro";
-import UserExperience from "../components/UserExperience.astro";
-import ChampionSection from "../components/ChampionSection.astro";
+import MeetTheTeam from "../components/MeetTheTeam.astro";
 import ChampionTeam from "../components/ChampionTeam.astro";
-import BetterConsultSection from "../components/BetterConsultSection.astro";
+import ChampionTeamTwo from "../components/ChampionTeamTwo.astro";
+import ReadyToTalk from "../components/ReadyToTalk.astro";
 ---
 
-<MainLayout title="About">
-  <figure class="full"><img src="../images/aboutheading.jpg" alt="" /></figure>
+<MainLayout title="Team">
+  <figure class="full"><img src="../images/teamhead.jpg" alt="" /></figure>
   <div class="head-container">
-    <Heading title="services" />
-    <p>Creative Services For Boost Your Business Growth</p>
+    <Heading title="team" />
+    <p>The Consultors</p>
   </div>
-  <OurVisionSection />
-  <NumbersSection />
-  <ValuesSection />
-  <div class="scroll">
-    <ValueScroll />
-  </div>
-  <UserExperience />
-  <ChampionSection />
+  <MeetTheTeam />
   <div class="scroll">
     <ChampionTeam />
+    <ChampionTeamTwo />
   </div>
-  <BetterConsultSection />
+  <ReadyToTalk />
 </MainLayout>
 
 <style>
